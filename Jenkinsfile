@@ -35,17 +35,7 @@ pipeline {
 
         stage('Remove Old Container') {
             steps {
-                sh '''
-                docker rm -f ${CONTAINER_NAME} || true
-                '''
-            }
-        }
-
-        stage('Remove Old Image') {
-            steps {
-                sh '''
-                docker rmi -f ${IMAGE_NAME}:latest || true
-                '''
+                removeContainer(()
             }
         }
 
