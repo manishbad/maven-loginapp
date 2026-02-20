@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'Docker-slave'
-    }
+    agent any
 
     environment {
         IMAGE_NAME = "manishbadgujar/login-app"
