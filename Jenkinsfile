@@ -35,9 +35,7 @@ pipeline {
 
         stage('Remove Old Container') {
             steps {
-                sh '''
-                docker rm -f ${CONTAINER_NAME} || true
-                '''
+                removeContainer()
             }
         }
 
