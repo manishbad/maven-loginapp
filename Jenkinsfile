@@ -35,7 +35,7 @@ pipeline {
 
         stage('Remove Old Container') {
             steps {
-                removeContainer(()
+                removeContainer()
             }
         }
 
