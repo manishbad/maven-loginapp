@@ -65,9 +65,7 @@ pipeline {
 
         stage('Push Image to DockerHub') {
             steps {
-                sh '''
-                docker push ${IMAGE_NAME}:latest
-                '''
+                pushContainer()
             }
         }
 
