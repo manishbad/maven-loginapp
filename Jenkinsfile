@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3'
+    }
+
     environment {
         IMAGE_NAME = "manishbadgujar/login-app"
         CONTAINER_NAME = "login-app-container"
